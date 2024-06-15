@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import UserProfile from "./components/UserProfile/index";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css'
+
+const userDetailsList = [
+  {
+    uniqueNo:1,
+    imageUrl:"https://assets.ccbp.in/frontend/react-js/esther-howard-img.png",
+    name : "Ester Howard",
+    profession: "Software Developer"
+ },
+  
+ {
+  uniqueNo:2,
+  imageUrl:"https://assets.ccbp.in/frontend/react-js/floyd-miles-img.png",
+  name : "floyd-miles",
+  profession: "Data Analyst"
+},
+
+{
+  uniqueNo:3,
+  imageUrl:"https://assets.ccbp.in/frontend/react-js/jacob-jones-img.png",
+  name : "Jacob Jones",
+  profession: "Frontend Developer"
+},
+
+{
+  uniqueNo:4,
+  imageUrl:"https://assets.ccbp.in/frontend/react-js/devon-lane-img.png",
+  name : "Devon Lane",
+  profession: "Fullstack Developer"
 }
 
-export default App;
+
+]
+
+const App = () => (
+  <div className="list-container">
+    <h1 className="title">Users List</h1>
+    <ul>
+      {userDetailsList.map((eachItem) => (
+        <UserProfile userDetails={eachItem} key={eachItem.uniqueNo}/>
+      ))}
+    </ul>
+  </div>
+)
+
+export default App

@@ -1,0 +1,33 @@
+.user-profile-container{
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    margin-bottom: 30px;
+
+}
+
+.avatar{
+    width: 48px;
+    height: 48px;
+    border-radius: 30px;
+
+}
+
+.user-details-container{
+    margin-left: 10px;
+}
+
+.user-name{
+    color: #12022f;
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.user-role{
+    color: #594d6d;
+    font-family: "Roboto";
+    font-size: 15px;
+    margin: 0px;
+}
